@@ -58,7 +58,7 @@ func requestHandler(w http.ResponseWriter, r *http.Request) {
 		w.WriteHeader(http.StatusNotFound)
 		w.Write(res)
 	} else {
-		w.Header().Set("Content-Type", "application/json")
+		w.Header().Set("Content-Type", "text/html")
 		w.WriteHeader(http.StatusOK)
 		w.Write(raw)
 	}
